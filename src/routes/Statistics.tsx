@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 import { TrendingUp, TrendingDown } from "lucide-react";
 import {
-    CartesianGrid, Line, LineChart, XAxis, YAxis,
+    CartesianGrid, Line, LineChart, XAxis,
     Label, PolarGrid, PolarRadiusAxis, RadialBar, RadialBarChart,
     Bar, BarChart,
 } from "recharts";
