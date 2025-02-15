@@ -23,7 +23,7 @@ import {
     DialogTitle,
     DialogTrigger,
     DialogClose,
-    DialogFooter
+    // DialogFooter
 } from "@/components/ui/dialog"
 
 const Historic = () => {

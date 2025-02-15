@@ -1,6 +1,10 @@
 import { Link } from "react-router";
 import { useTransfersStore } from "@/context/transfers";
 
+interface FilterProps {
+    children: React.ReactNode;
+}
+
 import { Button } from "@/components/ui/button";
 
 import { TrendingUp, TrendingDown } from "lucide-react";
@@ -25,7 +29,7 @@ import {
 } from "@/components/ui/chart";
 
 // COMPONENTE SOBREPOSICAO
-const Filter = ({ children }) => {
+const Filter: React.FC<FilterProps> = ({ children }) => {
     return (
         <main className="w-full h-full rounded-md bg-zinc-950/85 absolute top-0 flex flex-col justify-center items-center gap-5 px-6">
             <div className="text-slate-50 text-pretty">
