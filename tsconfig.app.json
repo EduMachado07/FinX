@@ -22,7 +22,12 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Necessário para tsBuildInfoFile */
-    "composite": true
+    "composite": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"]
 }
