@@ -18,6 +18,7 @@ export default {
         colorRed: "#E74C3C",
       },
       stroke: {
+        colorPrimary: "#666E55",
         colorGreen: "#3D8B40",
         colorRed: "#E74C3C",
       },
@@ -43,6 +44,11 @@ export default {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        gradient_1: "#2c6975",
+        gradient_2: "#6bb2a0",
+        gradient_3: "#1a4c39",
+        gradient_4: "#319b72",
+        colorPrimary: "#666E55",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

@@ -67,3 +67,30 @@
     @apply bg-background text-foreground;
   }
 }
+/* Apenas a scrollbar do site inteiro (não afeta divs internas) */
+html,
+body {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #b8b2a5 #e3dfd4; /* Firefox */
+}
+
+/* Estilos para WebKit (Chrome, Edge, Safari) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 100px; /* Largura da scrollbar */
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #e3dfd4; /* Cor do fundo da scrollbar */
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #b8b2a5; /* Cor do scroll */
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #9e9789; /* Cor quando passa o mouse */
+}

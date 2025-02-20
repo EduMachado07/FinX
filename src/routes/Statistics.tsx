@@ -391,7 +391,7 @@ const Statistics = () => {
                                     <span>
                                         <span className="text-colorGreen font-bold">Parabéns!{" "}</span>
                                         Suas finanças estão controladas este mês.</span>
-                                    <TrendingUp className="h-4 w-4" />
+                                    <TrendingUp className="h-4 w-4 max-sm:hidden" />
                                 </>
                             ) : (
                                 <>

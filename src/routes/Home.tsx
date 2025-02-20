@@ -107,7 +107,7 @@ const Home = () => {
                         </div>
 
                         {/* VALOR TRANSFERENCIA */}
-                        <div className='flex-[1] min-w-[120px] max-md:min-w-[200px] flex flex-col gap-0.5'>
+                        <div className='flex-[1] min-w-[120px] max-md:min-w-[130px] flex flex-col gap-0.5'>
                             <Label htmlFor="value" variant={'normal'}>Valor (R$)</Label>
                             <Input
                                 {...register('value')}
@@ -123,7 +123,7 @@ const Home = () => {
                         </div>
 
                         {/* DATA DA TRANSFERENCIA */}
-                        <div className='flex-[2] max-md:min-w-[200px] flex flex-col gap-0.5'>
+                        <div className='flex-[2] max-md:min-w-[130px] flex flex-col gap-0.5'>
                             <Label variant={'normal'}>Data</Label>
                             <Popover>
                                 <PopoverTrigger asChild>
@@ -148,7 +148,7 @@ const Home = () => {
 
                         {/* CATEGORIA TRANSFERENCIA */}
                         <Select onValueChange={(value) => setValue("category", value)}>
-                            <section className="flex-[1] min-w-[170px] max-md:w-2/4 flex flex-col gap-0.5">
+                            <section className="flex-[1] md:min-w-[160px] max-md:w-2/4 flex flex-col gap-0.5">
                                 <Label variant={'normal'}>Categoria</Label>
                                 <SelectTrigger className="">
                                     <SelectValue placeholder="Categoria" />
@@ -178,7 +178,7 @@ const Home = () => {
                                 className="max-md:flex flex-col gap-3"
                             >
                                 <Label className="" variant={"normal"}>Tipo:</Label>
-                                <section className="w-full flex items-center justify-center gap-7">
+                                <section className="w-full flex items-center justify-center gap-5">
                                     <div className="flex items-center gap-1.5">
                                         <RadioGroupItem value="Receita" id="r1" />
                                         <Label htmlFor="r1">Receita</Label>

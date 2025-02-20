@@ -21,7 +21,7 @@ const Routes = createBrowserRouter([
       // { path: 'education', element: <Education /> },
       { path: 'about', element: <About /> },
     ]
-  }
+  },
 ])
 
 createRoot(document.getElementById('root')!).render(

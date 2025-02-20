@@ -121,8 +121,8 @@ const Footer = () => {
 
                 {/* FORMULARIO EMAIL CONTATO */}
                 <section className='flex flex-col gap-2 max-md:w-full w-2/4'>
-                    <Label variant={'normal'} className='leading-6 text-slate-50'>
-                        Envia uma mensagem para o meu email. Vamos construir algo juntos!!
+                    <Label variant={'normal'} className='leading-6 text-slate-50 text-pretty max-md:text-justify'>
+                        Encontrou algum problema ou melhoria, tem uma ideia para ser desenvolvida, envia uma mensagem para o meu email. Vamos construir algo juntos!!
                     </Label>
 
                     <form
@@ -163,7 +163,7 @@ const Footer = () => {
                 </section>
             </main>
 
-            <p className='absolute bottom-1 right-28 font-mono font-bold text-slate-50'>
+            <p className='absolute bottom-2 md:right-28 max-md:right-6 font-mono font-bold text-slate-50'>
                 2025 - Made by Eduardo Machado
             </p>
         </main>

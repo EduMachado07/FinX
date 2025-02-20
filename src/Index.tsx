@@ -10,7 +10,7 @@ function Index() {
   const location = useLocation();
 
   return (
-    <main className="bg-colorBack h-full">
+    <main className="bg-colorBack w-full h-full">
       <Navbar />
       <AnimatePresence mode="wait">
         <section className="overflow-hidden">
@@ -25,7 +25,7 @@ function Index() {
               stiffness: 115, // Controla a "rigidez" da mola (maior = menos oscilação)
               damping: 10, // Controla o "atrito" (menor = mais oscilação)
             }}
-            className="max-md:pt-20 pt-28 pb-16 max-md:px-6 px-28"
+            className="max-md:pt-20 pt-28 pb-8 max-md:px-4 px-24 min-h-96"
           >
             <Outlet />
           </motion.div>
