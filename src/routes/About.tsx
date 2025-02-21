@@ -127,7 +127,7 @@ const About = () => {
                     <li className="flex max-md:items-start md:items-center">
                         <span className="font-semibold text-lg min-w-12">03</span>
                         <p className="text-balance">
-                            Histórico das transações cadastradas;
+                            Histórico das transações armazenado localmente no navegador;
                         </p>
                     </li>
                     <li className="flex max-md:items-start md:items-center">
