@@ -24,6 +24,9 @@ import {
 } from "@/components/ui/select";
 
 import { useTransfersStore } from "@/context/transfers";
+
+import GraphicMonth from "@/components/graphicMonth";
+
 // PARA FORMULARIO
 import { useForm } from 'react-hook-form'
 import { z } from "zod";
@@ -64,6 +67,8 @@ const Home = () => {
         setValue("date", selectedDate || new Date());
     };
 
+    const [category, setCategory] = React.useState<string | undefined>();
+
     const handleAddTransfer = (data: TypeForms) => {
         const parsedValue = parseFloat(data.value.replace(/\./g, "").replace(",", "."));
 
@@ -82,9 +87,10 @@ const Home = () => {
             description: "",
             value: "",
             date: undefined,
-            type: "Despesa",
         });
-        setDate(undefined)
+        setDate(undefined);
+        setValue("category", dataTrasnfer.category);
+        setValue("type", dataTrasnfer.type);
     };
 
     return (
@@ -147,10 +153,13 @@ const Home = () => {
                         </div>
 
                         {/* CATEGORIA TRANSFERENCIA */}
-                        <Select onValueChange={(value) => setValue("category", value)}>
+                        <Select value={category} onValueChange={(value) => {
+                            setCategory(value);
+                            setValue("category", value);
+                        }}>
                             <section className="flex-[1] md:min-w-[160px] max-md:w-2/4 flex flex-col gap-0.5">
                                 <Label variant={'normal'}>Categoria</Label>
-                                <SelectTrigger className="">
+                                <SelectTrigger>
                                     <SelectValue placeholder="Categoria" />
                                 </SelectTrigger>
                             </section>
@@ -177,7 +186,7 @@ const Home = () => {
                                 onValueChange={(value: "Receita" | "Despesa") => setValue("type", value)}
                                 className="max-md:flex flex-col gap-3"
                             >
-                                <Label className="" variant={"normal"}>Tipo:</Label>
+                                <Label className="" variant={"normal"}>Tipo</Label>
                                 <section className="w-full flex items-center justify-center gap-5">
                                     <div className="flex items-center gap-1.5">
                                         <RadioGroupItem value="Receita" id="r1" />
@@ -191,7 +200,7 @@ const Home = () => {
                             </RadioGroup>
                         </div>
 
-                        <Button className="md:hidden" size={"lg"} type="submit">Adicionar</Button>
+                        <Button className="md:hidden w-full" size={"lg"} type="submit">Adicionar</Button>
                     </section>
                     <Button className="max-md:hidden" size={"lg"} type="submit">Adicionar</Button>
                 </div>
@@ -281,6 +290,9 @@ const Home = () => {
                     </Link>
                 }
             </section>
+
+            <Label variant={"subtitle"} className="-mb-7 max-md:-mb-5">Estatíscas do mês</Label>
+            <GraphicMonth />
         </main >
     )
 }
