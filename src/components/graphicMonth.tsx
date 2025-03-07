@@ -7,11 +7,9 @@ interface FilterProps {
 
 import { Button } from "@/components/ui/button";
 
-import { TrendingUp, TrendingDown } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import {
-  CartesianGrid, Line, LineChart, XAxis,
-  Label, PolarGrid, PolarRadiusAxis, RadialBar, RadialBarChart,
-  Bar, BarChart,
+  Label, PolarRadiusAxis, RadialBar, RadialBarChart,
 } from "recharts";
 import {
   Card,
@@ -55,7 +53,7 @@ const chartConfig = {
 
 const GraphicMonth = () => {
 
-  const { monthlyData, weekData, currentMonthData, categoriesData, transfers } = useTransfersStore();
+  const { monthlyData, transfers } = useTransfersStore();
   const currentMonthName = [
     "janeiro", "fevereiro", "março", "abril", "maio", "junho",
     "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
